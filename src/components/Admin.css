@@ -1,0 +1,56 @@
+.admin-page {
+  min-height: 100vh;
+  background: #faf7f2;
+  padding: 50px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.admin-page h1 {
+  color: #2f3a56;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.admin-summary {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.admin-card {
+  background: #fff8f0;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  padding: 25px 20px;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid #e7d7b8;
+}
+
+.admin-card:hover {
+  transform: translateY(-5px);
+  background: #fffaf3;
+}
+
+.admin-card h2 {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.admin-card p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d2a55b;
+  margin: 0;
+}
+
+.admin-footer {
+  margin-top: 50px;
+  color: #777;
+  font-size: 0.9rem;
+}

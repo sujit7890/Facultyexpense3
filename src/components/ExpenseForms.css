@@ -1,0 +1,223 @@
+:root {
+  --bg-soft: #fffaf4;
+  --accent-gold: #d4af37;
+  --text-dark: #2c2c2c;
+  --input-bg: #ffffff;
+  --input-border: #e0d7c6;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --btn-primary-bg: #fbe3b9;
+  --btn-primary-hover: #f5cf8c;
+  --btn-outline-bg: #ffffff;
+  --btn-outline-border: #e0d7c6;
+  --btn-outline-hover: #faf7f2;
+}
+
+/* ===== Base Page Styling ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-soft);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== Form Container ===== */
+.form-container {
+  width: 95%;
+  max-width: 1100px; /* wider view for big screens */
+  background-color: var(--input-bg);
+  margin: 60px auto;
+  padding: 60px 60px;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px var(--shadow);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.form-container:hover {
+  transform: scale(1.01);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Logo Section ===== */
+.logo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.college-logo {
+  height: 160px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.college-logo:hover {
+  transform: scale(1.08);
+}
+
+/* ===== Header ===== */
+.form-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.form-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.form-description {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* ===== Input Field Groups ===== */
+.form-group {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Label */
+.form-label {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--text-dark);
+}
+
+/* Input Fields */
+.form-input,
+.form-textarea,
+.form-select {
+  padding: 18px 20px;
+  border: 1.5px solid var(--input-border);
+  border-radius: 12px;
+  font-size: 1.15rem;
+  outline: none;
+  background-color: var(--input-bg);
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 100%;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 8px var(--accent-gold);
+  transform: scale(1.01);
+}
+
+/* Textarea */
+.form-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* ===== Buttons Section ===== */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.btn {
+  padding: 16px 40px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: var(--btn-primary-bg);
+  border: none;
+  color: var(--text-dark);
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-primary-hover);
+  transform: scale(1.05);
+}
+
+/* Outline Button */
+.btn.btn-outline {
+  background-color: var(--btn-outline-bg);
+  border: 1.5px solid var(--btn-outline-border);
+  color: var(--text-dark);
+}
+
+.btn.btn-outline:hover {
+  background-color: var(--btn-outline-hover);
+  transform: scale(1.05);
+}
+
+/* ===== Back Button ===== */
+.back-button {
+  background: none;
+  border: none;
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.back-button:hover {
+  color: var(--accent-gold);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 992px) {
+  .form-container {
+    max-width: 95%;
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    padding: 30px 25px;
+  }
+
+  .form-title {
+    font-size: 2rem;
+  }
+
+  .form-input,
+  .form-textarea,
+  .form-select {
+    font-size: 1rem;
+    padding: 14px 16px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .college-logo {
+    height: 100px;
+  }
+
+  .form-title {
+    font-size: 1.8rem;
+  }
+}
