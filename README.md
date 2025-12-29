@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Faculty Form 3 – Faculty Expense Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Faculty Form 3 is a web-based application designed to **digitize and simplify faculty expense management** within an academic institution.  
+The system replaces manual paperwork with a structured, reliable, and user-friendly digital workflow.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📌 Overview
 
-### `npm start`
+Faculty members can submit **advance requests, expense reimbursements, and settlements** through an intuitive web interface.  
+The application ensures better accuracy, transparency, and faster processing of financial forms for both faculty and administrators.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Key Features
 
-### `npm test`
+- Secure login and faculty profile management  
+- Advance request and expense reimbursement forms  
+- Support for submissions **with or without bills**  
+- Client-side form validation for accurate data entry  
+- Auto-fill functionality for faculty details  
+- PDF generation for submitted forms  
+- Clean, responsive, and user-friendly UI  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Frontend**
+- React.js
+- JavaScript (ES6+)
+- HTML5, CSS3
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Backend / Services**
+- Firebase (authentication & data handling)
+- REST APIs
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Tools**
+- Git & GitHub
+- VS Code
+- NPM
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 How It Works
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Faculty logs into the system  
+2. Selects the type of form (Advance / Reimbursement / Settlement)  
+3. Fills in required details with real-time validation  
+4. Submits the form to the backend  
+5. Generates a downloadable PDF for records  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📂 Project Structure (High Level)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
