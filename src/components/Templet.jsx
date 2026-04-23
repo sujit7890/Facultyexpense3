@@ -1,6 +1,8 @@
 import React, { useRef, useState, useMemo } from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import './styles/Templet.css';
+
 
 const ReimbursementForm = () => {
   const formRef = useRef();
@@ -126,106 +128,7 @@ const ReimbursementForm = () => {
 
   return (
     <>
-      <style>{`
-        .reim-root {
-          min-height: 100vh;
-          background: linear-gradient(180deg,#f8fbff 0%, #eef7ff 60%);
-          padding: 28px 16px;
-          display: flex;
-          justify-content: center;
-          box-sizing: border-box;
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .reim-card {
-          width: 100%;
-          max-width: 920px;
-          background: white;
-          border-radius: 12px;
-          padding: 20px;
-          box-shadow: 0 12px 40px rgba(2,6,23,0.06);
-          border: 1px solid rgba(10,20,40,0.03);
-        }
-        .reim-header {
-          text-align: center;
-          margin-bottom: 8px;
-        }
-        .reim-header h2 {
-          margin: 4px 0 8px;
-          font-size: 1.2rem;
-          color: #07102a;
-        }
-        .field-row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin:8px 0; }
-        .field { flex:1 1 220px; display:flex; flex-direction:column; gap:6px; }
-        label { font-size:0.9rem; font-weight:700; color:#0f172a; }
-        input[type="text"], input[type="date"], input[type="number"], textarea {
-          padding: 10px 12px;
-          border-radius:8px;
-          border: 1px solid #dbe4f2;
-          font-size:0.95rem;
-        }
-        textarea { min-height: 70px; resize: vertical; }
-
-        /* table */
-        .reim-table {
-          width:100%;
-          border-collapse: collapse;
-          margin-top: 12px;
-        }
-        .reim-table th, .reim-table td {
-          border: 1px solid #e6eef9;
-          padding: 8px 10px;
-          text-align: left;
-          vertical-align: middle;
-          font-size: 0.95rem;
-        }
-        .reim-table th { background: #fbfdff; font-weight:700; color:#0b1220; }
-        .row-actions { display:flex; gap:8px; align-items:center; justify-content:center; }
-
-        .btn {
-          padding: 8px 12px;
-          border-radius: 8px;
-          border: none;
-          font-weight:700;
-          cursor:pointer;
-        }
-        .btn-primary {
-          background: linear-gradient(90deg,#2563eb,#7c3aed);
-          color: white;
-          box-shadow: 0 10px 28px rgba(37,99,235,0.12);
-        }
-        .btn-ghost { background: transparent; border: 1px solid rgba(10,20,40,0.06); color:#07102a; }
-
-        .add-row { margin-top: 10px; display:inline-block; }
-
-        .summary {
-          margin-top: 12px;
-          display:flex;
-          justify-content: flex-end;
-          gap: 12px;
-          align-items:center;
-          flex-wrap:wrap;
-        }
-        .summary .line { font-weight:700; color:#0b1220; }
-
-        .signatures { margin-top: 18px; display:flex; gap:20px; justify-content:space-between; align-items:flex-end; }
-        .sig-box { width:45%; border-top:1px solid #cbd5e1; padding-top:8px; text-align:center; color:#475569; }
-
-        /* download area */
-        .download-area { text-align:center; margin-top: 18px; }
-
-        @media (max-width: 820px) {
-          .field-row { flex-direction: column; }
-          .signatures { flex-direction:column; gap:10px; }
-          .sig-box { width:100%; }
-        }
-
-        /* print friendly */
-        @media print {
-          body * { visibility: hidden; }
-          .reim-card, .reim-card * { visibility: visible; }
-          .reim-card { position: absolute; left: 0; top: 0; width: 100%; box-shadow: none; border: none; }
-        }
-      `}</style>
+    
 
       <div className="reim-root">
         <div className="reim-card">
@@ -295,7 +198,7 @@ const ReimbursementForm = () => {
                 <tr>
                   <th style={{ width: 60 }}>Sr. No.</th>
                   <th style={{ width: 120 }}>Date</th>
-                  <th>Purpose</th>
+                  <th>Purpose Of Expeneses </th>
                   <th>Party/Vendor</th>
                   <th style={{ width: 140 }}>Bill No</th>
                   <th style={{ width: 120 }}>Amt (Rs.)</th>

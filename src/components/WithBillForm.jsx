@@ -3,6 +3,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import html2pdf from 'html2pdf.js';
 import mitLogo from '../asset/MITADTU.png';
 import officeUseImg from '../asset/office-use.png';
+import './styles/WithBill.css';
 
 const defaultRow = () => ({ srNo: '1', date: '', purpose: '', party: '', billNo: '', amount: '', billFile: null });
 
@@ -210,89 +211,7 @@ const WithBillForm = () => {
 
   return (
     <>
-      <style>{`
-        /* ===== layout & card ===== */
-        .wb-container { min-height:100vh; padding:24px; background: linear-gradient(180deg,#f8fbff,#eef7ff); display:flex; justify-content:center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .wb-card { width:100%; max-width:1100px; background:#fff; border-radius:12px; padding:18px; box-shadow:0 12px 40px rgba(2,6,23,0.06); }
-        .wb-header { display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:12px; }
-        .wb-logo { height:84px; }
-
-        /* two-column layout */
-        .wb-grid { display:flex; gap:18px; flex-wrap:wrap; }
-        .wb-left { flex:1 1 640px; min-width: 420px; }
-        .wb-right { width:360px; flex:0 0 360px; min-width: 260px; }
-
-        /* form field grid alignment */
-        .wb-row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:12px; }
-        .wb-field { flex:1 1 180px; display:flex; flex-direction:column; gap:6px; }
-
-        label { font-weight:700; color:#0f172a; font-size:0.95rem; margin-bottom:4px; }
-        input[type="text"], input[type="date"], input[type="number"], select {
-          padding:8px 10px;
-          border-radius:8px;
-          border:1px solid #dbe4f2;
-          font-size:15px;
-          box-sizing: border-box;
-          width:100%;
-          background: #fff;
-        }
-
-        /* ===== editable table ===== */
-        .wb-table { width:100%; border-collapse:collapse; margin-top:12px; table-layout: fixed; }
-        .wb-table thead th, .wb-table tbody td { border:1px solid #e6eef9; padding:8px; vertical-align:middle; }
-        .wb-table thead th { background:#fbfdff; font-weight:700; color:#0b1220; text-align:center; }
-        .wb-table input { width:100%; box-sizing: border-box; padding:6px 8px; border-radius:6px; border:1px solid #e6eef9; }
-
-        /* fixed column widths using classes and colgroup */
-        .col-sr { width:60px; }
-        .col-date { width:120px; }
-        .col-purpose { width:1fr; } /* flexible */
-        .col-party { width:160px; }
-        .col-billno { width:110px; }
-        .col-amount { width:120px; }
-        .col-upload { width:150px; }
-        .col-action { width:90px; }
-
-        .no-print { /* hide controls in PDF */ }
-
-        .file-info { font-size:12px; color:#475569; margin-top:6px; text-align:center; }
-
-        .btn { padding:8px 12px; border-radius:8px; border:none; cursor:pointer; font-weight:700; }
-        .btn-primary { background: linear-gradient(90deg,#2563eb,#7c3aed); color:#fff; }
-        .btn-ghost { background:transparent; border:1px solid rgba(10,20,40,0.06); }
-
-        .add-row-btn { margin-top:10px; background:#4f46e5; color:white; border:none; padding:8px 12px; border-radius:8px; cursor:pointer; }
-
-        /* ===== preview table ===== */
-        .preview { margin-top:18px; padding:16px; background:#fff; border-radius:8px; border:1px solid #eef3ff; }
-        .preview .meta { display:flex; gap:12px; flex-wrap:wrap; }
-        .preview-table { width:100%; border-collapse:collapse; margin-top:12px; table-layout: fixed; border:1px solid #e6eef9; }
-        .preview-table th, .preview-table td { padding:8px; border:1px solid #eef3ff; text-align:left; vertical-align:top; }
-        .preview-table th { background:#fbfdff; font-weight:700; text-align:center; }
-
-        .preview .col-sr, .preview .col-date, .preview .col-purpose, .preview .col-party, .preview .col-billno, .preview .col-amount, .preview .col-upload {
-          /* keep same widths as editable table */
-        }
-
-        .thumb { display:block; max-width:120px; max-height:90px; object-fit:cover; border-radius:6px; border:1px solid #eceff6; }
-
-        /* custom fields */
-        .custom-field { display:flex; gap:8px; margin-top:8px; align-items:center; }
-        .custom-field input { padding:6px 8px; border:1px solid #e6eef9; border-radius:6px; }
-
-        /* responsive */
-        @media (max-width: 960px) {
-          .wb-right { width:100%; flex-basis:100%; }
-          .wb-left { width:100%; }
-        }
-
-        @media print {
-          .no-print, button { display:none !important; }
-          .wb-card { box-shadow:none; border:none; padding:0; }
-          input[type="file"] { display:none !important; }
-          .add-row-btn, .btn-ghost { display:none !important; }
-        }
-      `}</style>
+      
 
       <div className="wb-container">
         <div className="wb-card" role="main">
